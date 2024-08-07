@@ -1,0 +1,38 @@
+﻿@model DefenseSimulator.Models.CountTil
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>הכנס כמות טילים</h1>
+
+    <form asp-action="Create">
+<div class="row">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group col-4">
+            <label asp-for="ElectronicJamming" class="control-label"></label>
+            <input asp-for="ElectronicJamming" class="form-control" />
+            <span asp-validation-for="ElectronicJamming" class="text-danger"></span>
+        </div>
+        <div class="form-group col-4">
+            <label asp-for="AntiAirSystem" class="control-label"></label>
+            <input asp-for="AntiAirSystem" class="form-control" />
+            <span asp-validation-for="AntiAirSystem" class="text-danger"></span>
+        </div>
+        <div class="form-group col-4">
+            <label asp-for="InterceptorMissile" class="control-label"></label>
+            <input asp-for="InterceptorMissile" class="form-control" />
+            <span asp-validation-for="InterceptorMissile" class="text-danger"></span>
+        </div>
+</div>
+    <div class="form-group row mt-3">
+            <input type="submit" value="עדכן" class="btn btn-primary" />
+        </div>
+    </form>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
