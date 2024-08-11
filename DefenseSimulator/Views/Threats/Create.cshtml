@@ -33,7 +33,7 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" onclick = "print()" class="btn btn-primary" />
             </div>
         </form>
     </div>
@@ -42,7 +42,13 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+<script>
+    function print(){
+        console.log("123")
 
+    }
+
+</script>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
